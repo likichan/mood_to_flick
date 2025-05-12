@@ -1,6 +1,9 @@
 'use client';
 
+import Rating from '@/components/Rating';
+
 type Props = {
+  id: number;
   thumbnail: string;
   title: string;
   year: string;
@@ -12,6 +15,7 @@ type Props = {
 };
 
 export default function MovieCard({
+  id,
   thumbnail,
   title,
   year,
@@ -49,6 +53,9 @@ export default function MovieCard({
           出演: {actors.join(', ')}
         </p>
       </div>
+
+      
+      <Rating movieId={id} />
     </div>
   );
 }
