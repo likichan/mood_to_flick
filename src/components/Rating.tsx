@@ -19,7 +19,8 @@ export default function Rating({ movieId }: RatingProps) {
 
   // クリックで評価を変更＆保存
   const handleRate = (star: number) => {
-    setRating(star);
+    const newRating = star === rating ? 0 : star;
+    setRating(newRating); 
     localStorage.setItem(`rating_${movieId}`, String(star));
   };
 
