@@ -43,6 +43,7 @@ export default async function RecommendPage({ searchParams }: PageProps) {
         {movies.map((movie) => (
           <MovieCard
             key={movie.id}
+            id={movie.id}
             thumbnail={movie.thumbnail}
             title={movie.title}
             year={movie.year}
