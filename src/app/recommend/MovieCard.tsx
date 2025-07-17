@@ -12,6 +12,7 @@ type Props = {
   genre: string[];
   description: string;
   onClick?: () => void;
+  onRatingChange?: (movie: any, rating: number) => void; // 追加
 };
 
 export default function MovieCard({
@@ -24,6 +25,7 @@ export default function MovieCard({
   genre,
   description,
   onClick,
+  onRatingChange,
 }: Props) {
   return (
     <div
@@ -55,7 +57,17 @@ export default function MovieCard({
       </div>
 
       
-      <Rating movieId={id} />
+      <Rating
+        movieId={id}
+        onChange={rating => {
+          if (onRatingChange) {
+            onRatingChange(
+              { id, title, thumbnail, year, actors, duration, genre, description },
+              rating
+            );
+          }
+        }}
+      />
     </div>
   );
 }

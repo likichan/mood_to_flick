@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+dist/
+build/
 
 # testing
 /coverage
@@ -29,9 +31,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+*.log
+coverage/
 
 # env files (can opt-in for committing if needed)
 .env*
+.env
+
+# OS/エディタ
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
 
 # vercel
 .vercel
@@ -42,3 +54,7 @@ next-env.d.ts
 
 # ignore Next.js generated type file
 next-env.d.ts
+.venv/
+venv/
+__pycache__/
+*.pyc
