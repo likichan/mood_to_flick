@@ -1,6 +1,6 @@
 // src/lib/tmdb.ts
 const BASE = 'https://api.themoviedb.org/3';
-const KEY  = process.env.TMDB_API_KEY!;
+const KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY!;  // NEXT_PUBLIC_を追加
 
 // タイトルで検索
 export async function getTopRatedMovies(count = 4) {

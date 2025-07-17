@@ -7,7 +7,7 @@ const ZenMaruGothic = Zen_Maru_Gothic({
 
 export default function Footer() {
   return (
-    <footer className="flex gap-6 py-4 text-[#FFB030] px-[120px]">
+    <footer className="flex gap-6 py-4 text-[#FFB030] px-[120px] bg-[#14161f]">
       <div className={`${ZenMaruGothic.className}`}>©︎ 2025 MOOD TO FLICKS</div>
       <div className={`${ZenMaruGothic.className}`}>made with ♡ for your movie time</div>
     </footer>
