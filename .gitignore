@@ -42,4 +42,4 @@ next-env.d.ts
 
 # ignore Next.js generated type file
 next-env.d.ts
-.venv/
+venv/
